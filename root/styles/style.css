@@ -1,0 +1,781 @@
+/*
+font-family: 'Chicle', cursive;
+font-family: 'Lustria', serif;
+font-family: 'Oxygen', sans-serif;
+*/
+
+/* page colors #F39C12 #E214C0 #5B2C6F #64B5BB #D1AFD5 */
+
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #D1AFD5;
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    background-color: #C667B2;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, .2);
+}
+
+header a {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: .5rem 1rem;
+}
+
+header a img {
+    margin: 0 1rem;
+    order: 1;
+}
+
+nav {
+    position: fixed;
+    top: 100%;
+    background-color: #DE9BD0;
+    width: 100%;
+    display: none;
+    padding: 5px;
+    top: 20px;
+    right: 50px;
+}
+
+nav a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: .05rem;
+}
+
+nav li {
+    padding: 1rem;
+    border-bottom: dotted 1px #5B2C6F;
+
+}
+
+nav li:last-of-type {
+    border-bottom: none;
+}
+
+nav li a {
+    display: block;
+}
+
+nav li a:hover {
+    color: #64B5BB;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navToggler:checked ~ nav {
+    display: block;
+}
+
+.navToggler {
+    display: none;
+}
+
+.navTogglerMenu {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mi {
+    color: #5B2C6F;
+}
+
+.menuClose {
+    display: none;
+}
+
+.navToggler:checked ~ .navTogglerMenu .menuClose {
+    display: block;
+}
+
+.navToggler:checked ~ .navTogglerMenu .menuOpen {
+    display: none;
+}
+
+/* hero */
+
+.hero {
+    background-image: url("../images/hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+
+.hero-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 15rem;
+    font-family: 'Chicle', cursive;
+    color: transparent;
+    background: linear-gradient(45deg, #B464BB, #6F4685, #5B2C6F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 4px 2px rgba(0, 0, 0, .2);
+}
+
+/* main */
+
+/* new music */
+.new-music {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "footer footer";
+    column-gap: 5px;
+    grid-row-gap: 5px;
+    align-items: start;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 0.2),
+        4px 4px 0px rgba(0, 0, 0, 0.2),
+        6px 6px 0px rgba(0, 0, 0, 0.2),
+        8px 8px 0px rgba(0, 0, 0, 0.2),
+        10px 10px 0px rgba(0, 0, 0, 0.2),
+        12px 12px 0px rgba(0, 0, 0, 0.2);
+    background-color: #5B2C6F;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+}
+
+.new-music img {
+    padding: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+
+}
+
+.new-music p {
+
+    font-size: 2rem;
+    padding: 40px;
+    margin-right: 30px;
+    border: 4px groove #64B5BB;
+    border-style: outset;
+    text-align: center;
+    align-self: center;
+    background-color: #000;
+    color: #fff;
+    outline: 0.5rem outset #E214C0;
+
+}
+
+.song-list h4 {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+
+}
+
+.song-list {
+    font-size: 2rem;
+    line-height: 2;
+    padding: 0px 50px 0px 15px;
+    align-self: start;
+    text-align: center;
+}
+
+.video {
+
+    padding: 0 50px 50px 20px;
+    align-self: start;
+    justify-self: center;
+
+}
+
+hr {
+    border: .5px solid #000;
+    margin-bottom: 50px;
+}
+
+/* slick carousel */
+
+.slider {
+    width: 50%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 2px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+.slick-next {
+    right: -25px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+/* mailing list */
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mailing-list {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #5B2C6F;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #5B2C6F;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #64B5BB;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E214C0;
+}
+
+.photo {
+    flex: 1;
+    padding: 50px;
+}
+
+.photo img {
+    max-width: 100%;
+}
+
+/* social */
+.social-media {
+    display: flex;
+    justify-content: center;
+    background-color: #64B5BB;
+    padding-bottom: 40px;
+}
+
+.follow-us {
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: #64B5BB;
+    padding: 10px;
+
+}
+
+.item {
+    padding: 10px;
+    margin: 5px
+}
+
+/* footer */
+footer {
+    background-color: #C667B2;
+    color: #5B2C6F;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* about page */
+p {
+    font-size: 1.6rem;
+}
+
+strong {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bio h2 {
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Chicle', cursive;
+    padding-top: 50px;
+    margin-top: 100px;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bio h4 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.intro {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+}
+
+.intro picture {
+    flex: 1;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 5px;
+    padding-top: 25px;
+}
+
+.intro-content {
+    flex: 1;
+    padding: 25px 50px 0 15px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.intro-content p:nth-child(2) {
+    padding-top: 10px;
+}
+
+.origins {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    padding-bottom: 50px;
+}
+
+.origins picture {
+    flex: 1;
+    width: 100%;
+    padding-left: 200px;
+}
+
+.origins-content {
+    flex: 1;
+    padding-left: 100px;
+    text-align: justify;
+    text-indent: 2em;
+    align-self: center;
+}
+
+.sound {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+}
+
+.sound picture {
+    flex: 1;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 5px;
+    padding-top: 25px;
+
+}
+
+.sound-content {
+    flex: 1;
+    padding: 100px 50px 0 15px;
+    text-align: justify;
+    text-indent: 2em;
+
+}
+
+.albums {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    padding-bottom: 50px;
+}
+
+.albums picture {
+    flex: 1;
+    width: 100%;
+    padding: 25px 50px 50px 200px;
+
+}
+
+.albums-content {
+    flex: 1;
+    padding-left: 100px;
+    text-align: justify;
+    text-indent: 2em;
+    align-self: center;
+
+}
+
+.albums-content p:nth-child(2) {
+    padding-top: 10px;
+}
+
+/* shows page */
+
+.tour-dates-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-top: 300px;
+    padding-bottom: 100px;
+
+}
+
+.tour-dates-head picture {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.tour-dates-head img {
+    padding-top: 500px;
+    padding-bottom: 100px;
+}
+
+.tour-dates-head h1 {
+    font-size: 6rem;
+    font-family: 'Chicle', cursive;
+    padding-top: 50px;
+    margin-top: 100px;
+    text-decoration: none;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 0.2),
+        4px 4px 0px rgba(0, 0, 0, 0.2),
+        6px 6px 0px rgba(0, 0, 0, 0.2),
+        8px 8px 0px rgba(0, 0, 0, 0.2),
+        10px 10px 0px rgba(0, 0, 0, 0.2),
+        12px 12px 0px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tour-dates {
+
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 250px;
+    padding-bottom: 100px;
+
+}
+
+.tour-dates li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #5B2C6F;
+
+
+}
+
+.tour-dates li:last-of-type {
+    border-bottom: none;
+}
+
+.date,
+.city {
+    font-weight: bolder;
+}
+
+.city {
+    padding-right: 100px;
+
+}
+
+.tickets a {
+    background-color: #64B5BB;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+/* contact page */
+
+.contact-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 200px;
+}
+
+.contact-page h4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.left {
+    flex: 1;
+    padding: 25px 15px 100px 50px;
+
+}
+
+.right {
+    flex: 1;
+    padding-top: 20px;
+
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    padding: 8px;
+    border: 2px solid #5B2C6F;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #64B5BB;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* shop page */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    align-items: baseline;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.photo {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+}
+
+.caption {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    padding: 8px 20px;
+    background-color: #64B5BB;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* media queries */
+
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .new-music {
+        grid-template-columns:1fr;
+        
+    }
+    .contact-page,
+    .flex-container {
+        flex-basis: 100%;
+        flex-direction: column;
+        padding-bottom: 100px;
+    }
+
+    .intro,
+    .origins,
+    .sound,
+    .albums {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-content,
+    .origins-content,
+    .sound-content,
+    .albums-content {
+        flex-basis: 100%;
+    }
+
+}
+
+
+@media screen and (min-width: 800px) {
+    .navTogglerMenu {
+        display: none;
+    }
+
+    header {
+        justify-content: start;
+    }
+
+    header a img {
+        order: 0;
+    }
+
+    nav {
+        all: unset;
+        margin-left: auto;
+        align-self: center;
+    }
+
+    nav ul {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    .bio {
+        flex-direction: row;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 0 20%;
+    }
+}

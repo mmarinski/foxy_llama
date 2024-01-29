@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Michelle Marinski -->
+    <!--material symbols-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&family=Lustria&family=Oxygen&display=swap" rel="stylesheet">
+    <!--style sheets-->
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="images/logo100.png" alt="logo"></a>
+        <input type="checkbox" class="navToggler" id="navToggler">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/about.html">Bio</a></li>
+                <li><a href="pages/shows.html">Shows</a></li>
+                <li><a href="pages/shop.html">Merch</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <label for="navToggler" class="navTogglerMenu" name="navToggler">
+            <span class="material-symbols-outlined mi menuOpen">menu</span>
+            <span class="material-symbols-outlined mi menuClose">close</span>
+
+        </label>
+    </header>
+
+    <section>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Foxy Llama</h1>
+            </div>
+        </div>
+    </section>
+    <main>
+        <h3>New Album "Luminescent Reverie" Out Now!</h3>
+
+        <section>
+           <div class="new-music">
+            <img src="images/newAlbum.jpg" alt="glowing neon sphere on dark background">
+            <p>Step into the extraordinary and surreal soundscape of Foxy Llama's latest masterpiece, "Luminescent Reverie." Embarking on a voyage through the astral planes, hit tracks such as “Vapor Trails” summon a mesmerizing blend of sonic enchantment that transcends time and space. Released in the cosmic yearning of 2023, "Luminescent Reverie" is an otherworldly odyssey that explores the boundaries of musical imagination, leaving its listeners captivated and spellbound.</p>
+
+            <div class="song-list">
+                <ul>
+                    <h4>Track List</h4>
+                    <li>Cosmic Ascension</li>
+                    <li>Lunar Mirage</li>
+                    <li>Stardust Caravan</li>
+                    <li>Vapor Trails</li>
+                    <li>Luminescent Reverie</li>
+                    <li>Euphoric Nexus</li>
+                    <li>Electric Oasis</li>
+                    <li>The End is Near</li>
+                </ul>
+            </div>
+            <div class="video"> <iframe src="https://drive.google.com/file/d/1f1kk8zdvnxE6Tb0-YkfsYq8Kgsb-I_B_/preview" width="600" height="450" allow="autoplay"></iframe>
+            </div>
+           </div>
+        </section>
+        <hr>
+        <!--jQuery slide show -->
+        <section>
+            <div class="carousel">
+                <img src="images/band1-700.jpg" alt="group of people playing music on a hill">
+                <img src="images/band3-700.jpg" alt="crowd of people at a concert">
+                <img src="images/band4-700.jpg" alt=" group of people playing music on a stage ">
+                <img src="images/band5-700.jpg" alt="group of people playing guitars on stage">
+            </div>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script src="scripts/slick.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".carousel").slick({
+                    dots: true,
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 3,
+                    centerMode: true
+
+                });
+            });
+
+        </script>
+        <hr>
+        <section>
+            <h2>Join Our Mailing List!</h2>
+            <div class="flex-container">
+                <div class="mailing-list">
+
+                    <form action="#" method="post">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="photo">
+                    <img src="images/neonHallway400.jpg" alt="neon colored hallway">
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="follow-us">
+                <h2>Follow Us</h2>
+            </div>
+            <div class="social-media">
+                <div class="item"><img src="images/instagram%20.png" alt="instagram logo"></div>
+                <div class="item"><img src="images/youTube.png" alt="youtube logo"></div>
+                <div class="item"><img src="images/facebook.png" alt=" facebook logo"></div>
+                <div class="item"><img src="images/twitter.png" alt="twitter logo"></div>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+
+
+
+    <footer>
+        <p>Copyright 2023 | Foxy Llama</p>
+    </footer>
+
+</body>
+
+</html>
